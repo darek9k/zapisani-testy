@@ -1,0 +1,28 @@
+{
+  "name": "zapisani-testy",
+  "version": "1.0.0",
+  "description": "Testy z zadania",
+  "main": "index.js",
+  "scripts": {
+    "open": "npx cypress open",
+    "chrome":"npx cypress run --browser chrome"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darek9k/zapisani-testy.git"
+  },
+  "author": "Dariusz Kowalski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darek9k/zapisani-testy/issues"
+  },
+  "homepage": "https://github.com/darek9k/zapisani-testy#readme",
+  "dependencies": {
+    "cypress": "^13.6.4",
+    "faker": "^6.6.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

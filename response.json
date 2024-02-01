@@ -1,0 +1,1238 @@
+{
+  "definition": [
+    {
+      "id": "wssotn",
+      "element": "MainEmail",
+      "text": "email_main",
+      "field_name": "email_main",
+      "label": "Email",
+      "description": "",
+      "dateFormat": "yyyy-MM-dd",
+      "personaldata": true
+    },
+    {
+      "id": "cp9zfk",
+      "element": "TextInput",
+      "text": "phone_number",
+      "field_name": "phone_number",
+      "label": "Numer telefonu",
+      "description": "",
+      "dateFormat": "yyyy-MM-dd",
+      "personaldata": true
+    },
+    {
+      "id": "ixczio",
+      "element": "FirstName",
+      "text": "first_name",
+      "field_name": "first_name",
+      "label": "Imię",
+      "description": "",
+      "dateFormat": "yyyy-MM-dd",
+      "personaldata": true
+    },
+    {
+      "id": "cd2e0f",
+      "element": "LastName",
+      "text": "last_name",
+      "field_name": "last_name",
+      "label": "Nazwisko",
+      "description": "",
+      "dateFormat": "yyyy-MM-dd",
+      "personaldata": true
+    },
+    {
+      "id": "qfumpa",
+      "element": "RadioButtons",
+      "text": "select_field_13e69f10",
+      "field_name": "select_field_13e69f10",
+      "label": "Jakiego typu działalość prowadzisz?",
+      "description": "Podaj przybliżony profil działalności jaką będziesz prowadzić za pomocą ZAPISANI.PL",
+      "placeholder": "< wybierz >",
+      "showinpayments": false,
+      "hasPrice": false,
+      "hasPercent": false,
+      "options": [
+        {
+          "value": "Konferencja / Koncert / Sympozjum",
+          "text": "Konferencja / Koncert / Sympozjum",
+          "key": "select_option_7d3048e8"
+        },
+        {
+          "value": "Szkolenie / Kurs",
+          "text": "Szkolenie / Kurs",
+          "key": "select_option_451bac59"
+        },
+        {
+          "value": "Obóz / Kolonie",
+          "text": "Obóz / Kolonie",
+          "key": "select_option_5dc53349"
+        },
+        {
+          "value": "Szkoła",
+          "text": "Szkoła",
+          "key": "select_option_372a8bb8"
+        },
+        {
+          "value": "Gabinet psychologiczny / psychoterapeutyczny",
+          "text": "Gabinet psychologiczny / psychoterapeutyczny",
+          "key": "select_option_905e8417"
+        },
+        {
+          "value": "Inne",
+          "text": "Inne",
+          "key": "select_option_f6a7034c"
+        }
+      ]
+    },
+    {
+      "id": "nawgny",
+      "element": "TextInput",
+      "text": "basic_field_e7f7f73f",
+      "field_name": "basic_field_e7f7f73f",
+      "label": "",
+      "description": "",
+      "showTimeSelect": false,
+      "dateFormat": "yyyy-MM-dd"
+    },
+    {
+      "id": "m7vcaj",
+      "element": "TextInput",
+      "text": "basic_field_ee0b49fb",
+      "field_name": "basic_field_ee0b49fb",
+      "label": "Ilu klientów planujesz obsługiwać?",
+      "description": "Podaj orientacyjną liczbę klientów, których planujesz obsługiwać przy pomocy ZAPISANI.PL",
+      "showTimeSelect": false,
+      "dateFormat": "yyyy-MM-dd"
+    },
+    {
+      "id": "w4gya7",
+      "element": "TextArea",
+      "text": "basic_field_855dd2b7",
+      "field_name": "basic_field_855dd2b7",
+      "label": "Preferowany termin i sposób kontaktu",
+      "description": "",
+      "showTimeSelect": false,
+      "dateFormat": "yyyy-MM-dd"
+    },
+    {
+      "id": "3kgbb8",
+      "element": "TextArea",
+      "text": "basic_field_b728b1ae",
+      "field_name": "basic_field_b728b1ae",
+      "label": "Uwagi",
+      "description": "Tu możesz wpisać dodatkowe uwagi, pytania, sugestie, lub po prostu życzyć nam powodzenia!",
+      "showTimeSelect": false,
+      "dateFormat": "yyyy-MM-dd"
+    },
+    {
+      "id": "zden0j",
+      "element": "RadioButtons",
+      "text": "Produkt",
+      "field_name": "product",
+      "label": "Produkt",
+      "description": "",
+      "showinpayments": true,
+      "variant": "primary",
+      "print": false,
+      "hasPrice": true,
+      "hasPercent": false,
+      "options": [
+        {
+          "value": "Produkt ze skończoną pulą",
+          "text": "Produkt ze skończoną pulą",
+          "key": "product_field_83cf9412",
+          "price": 100.01,
+          "itemsCount": 100.01,
+          "inventory": 2,
+          "count": 2
+        },
+        {
+          "value": "Produkt z ograniczoną pulą",
+          "text": "Produkt z ograniczoną pulą",
+          "key": "product_field_f5296ba2",
+          "price": 200.02,
+          "itemsCount": 200.02,
+          "inventory": 1000,
+          "count": 46
+        }
+      ]
+    }
+  ],
+  "paymentRules": {
+    "eventId": "06a9d",
+    "data": [
+      {
+        "id": "64267eff041c271c2bf4b3cc",
+        "category": "Rabaty",
+        "name": "Rabat 25%",
+        "percent": -25,
+        "humanRule": "Kod rabatowy: = RABAT25",
+        "rule": {
+          "id": "b9aa9998-4567-489a-bcde-f1860c6189c4",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "888b89ba-0123-4456-b89a-b18729453514",
+              "properties": {
+                "field": "basic_field_198f80d6",
+                "operator": "equal",
+                "value": [
+                  "RABAT25"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "text"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "basic_field_198f80d6"
+                  },
+                  "RABAT25"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "basic_field_198f80d6": null
+          }
+        },
+        "_id": "6414896318652212d7587443"
+      },
+      {
+        "id": "ddc93c82",
+        "category": "Z formularza",
+        "name": "Abonament 50",
+        "amount": "1188",
+        "builderElementId": "product_field_c10e1ec8",
+        "humanRule": "Produkt = Abonament 50",
+        "rule": {
+          "id": "b367ab58-4a3e-45ff-8e2b-5b85c5b65d63",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "f312bbe6-753b-4c06-9e35-75ea311d3ae9",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_c10e1ec8"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_c10e1ec8"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d78"
+      },
+      {
+        "id": "1cfdbae4",
+        "category": "Z formularza",
+        "name": "Abonament M50",
+        "amount": "39",
+        "builderElementId": "product_field_c10e1ec1",
+        "humanRule": "Produkt = Abonament M50",
+        "rule": {
+          "id": "5509c259-2221-43ce-8f89-29d1b92f6557",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "de02d20a-4a43-46ed-885a-914ecf67170b",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_c10e1ec1"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_c10e1ec1"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d79"
+      },
+      {
+        "id": "d9ad8725",
+        "category": "Z formularza",
+        "name": "Abonament 100",
+        "amount": "1788",
+        "builderElementId": "product_field_c10e1ec9",
+        "humanRule": "Produkt = Abonament 100",
+        "rule": {
+          "id": "096e1a6f-124d-4218-8ae9-a91cc73d35d6",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "7fcc6390-9bd3-49ae-b07e-0da0eef1a1a7",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_c10e1ec9"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_c10e1ec9"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d7a"
+      },
+      {
+        "id": "69f51fba",
+        "category": "Z formularza",
+        "name": "Abonament M100",
+        "amount": "59",
+        "builderElementId": "product_field_c10e1ec2",
+        "humanRule": "Produkt = Abonament M100",
+        "rule": {
+          "id": "005d3a56-17db-4720-9fb7-ff6b7aa39544",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "3e5bcb59-a38f-4e6e-97fb-428ae77930b3",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_c10e1ec2"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_c10e1ec2"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d7b"
+      },
+      {
+        "id": "110cd561",
+        "category": "Z formularza",
+        "name": "Abonament 200",
+        "amount": "2988",
+        "builderElementId": "product_field_1b54f2bc",
+        "humanRule": "Produkt = Abonament 200",
+        "rule": {
+          "id": "23dead60-eb82-41af-8e67-d74923797cde",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "3992963e-35e8-4697-9e4d-a52d66eed6f7",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_1b54f2bc"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_1b54f2bc"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d7c"
+      },
+      {
+        "id": "7e925cec",
+        "category": "Z formularza",
+        "name": "Abonament M200",
+        "amount": "499",
+        "builderElementId": "product_field_1b54f2b1",
+        "humanRule": "Produkt = Abonament M200",
+        "rule": {
+          "id": "576d66cb-7424-4628-9ee7-cbbeb0af80ab",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "4a5c57c5-f217-4f31-a9f6-63a5ea8de97f",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_1b54f2b1"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_1b54f2b1"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d7d"
+      },
+      {
+        "id": "7ca9bccd",
+        "category": "Z formularza",
+        "name": "Abonament 500",
+        "amount": "5988",
+        "builderElementId": "product_field_f836ef28",
+        "humanRule": "Produkt = Abonament 500",
+        "rule": {
+          "id": "1009de92-306c-44b4-aa09-578bf4071ba2",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "e06618f4-137c-4772-8388-bf349958fd98",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_f836ef28"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_f836ef28"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d7e"
+      },
+      {
+        "id": "caa7b300",
+        "category": "Z formularza",
+        "name": "Abonament M500",
+        "amount": "199",
+        "builderElementId": "product_field_f836ef21",
+        "humanRule": "Produkt = Abonament M500",
+        "rule": {
+          "id": "5c5aa032-ebe0-4852-8974-b82900c6b296",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "9809a5b1-8709-4ac5-adfe-eda7b1dc9b71",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_f836ef21"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_f836ef21"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d7f"
+      },
+      {
+        "id": "1be7cbd4",
+        "category": "Z formularza",
+        "name": "Pakiet 100",
+        "amount": "800",
+        "builderElementId": "product_field_c10e1ec3",
+        "humanRule": "Produkt = Pakiet 100",
+        "rule": {
+          "id": "361bc2c9-e06e-4ea1-a114-5f911b3fb9f5",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "3263c040-8486-4dd1-a6bd-67bd1bb4501a",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_c10e1ec3"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_c10e1ec3"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d80"
+      },
+      {
+        "id": "b7c9b1ed",
+        "category": "Z formularza",
+        "name": "Pakiet 200",
+        "amount": "1400",
+        "builderElementId": "product_field_c10e1ec4",
+        "humanRule": "Produkt = Pakiet 200",
+        "rule": {
+          "id": "83006762-1600-460e-ba94-e99c7398ce1f",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "7c4a9ad3-7d6a-43a4-8fc3-41c94cd2c19c",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_c10e1ec4"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_c10e1ec4"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d81"
+      },
+      {
+        "id": "c528f491",
+        "category": "Z formularza",
+        "name": "Pakiet 500",
+        "amount": "3000",
+        "builderElementId": "product_field_1b54f2b4",
+        "humanRule": "Produkt = Pakiet 500",
+        "rule": {
+          "id": "9a30c20b-67b7-4478-bc41-1a9e3c868fc5",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "56d1eaa2-1299-4092-81c9-f2c85edc5e57",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_1b54f2b4"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_1b54f2b4"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d82"
+      },
+      {
+        "id": "d9ea2bb4",
+        "category": "Z formularza",
+        "name": "Pakiet 1000",
+        "amount": "5000",
+        "builderElementId": "product_field_f836ef24",
+        "humanRule": "Produkt = Pakiet 1000",
+        "rule": {
+          "id": "05bd12a9-2f2d-4798-bb03-2232e273a076",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "91458ed2-0e0a-411f-b8b2-f59b53598eec",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_f836ef24"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_f836ef24"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "_id": "6437dad323ee4d27b4132d83"
+      },
+      {
+        "id": "baa51361",
+        "category": "Z formularza",
+        "name": "Produkt ze skończoną pulą",
+        "amount": "100.01",
+        "builderElementId": "product_field_83cf9412",
+        "humanRule": "Produkt = Produkt ze skończoną pulą",
+        "rule": {
+          "id": "7d7a250a-311c-4a73-aa91-7889548bdc90",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "041bbbbe-8577-4cf8-afbc-a1882376ed28",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_83cf9412"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_83cf9412"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "readOnly": false,
+        "_id": "65ba991d5293dbd4255dd62d"
+      },
+      {
+        "id": "c6bdc452",
+        "category": "Z formularza",
+        "name": "Produkt z ograniczoną pulą",
+        "amount": "200.02",
+        "builderElementId": "product_field_f5296ba2",
+        "humanRule": "Produkt = Produkt z ograniczoną pulą",
+        "rule": {
+          "id": "5b856a80-c97c-47c9-a934-5b4e6f6e27a4",
+          "type": "group",
+          "children1": [
+            {
+              "type": "rule",
+              "id": "af7e2230-1f96-40ef-ade4-4843979c8ea3",
+              "properties": {
+                "field": "product",
+                "operator": "select_equals",
+                "value": [
+                  "product_field_f5296ba2"
+                ],
+                "valueSrc": [
+                  "value"
+                ],
+                "valueType": [
+                  "select"
+                ]
+              }
+            }
+          ]
+        },
+        "jsonRule": {
+          "errors": [],
+          "logic": {
+            "and": [
+              {
+                "==": [
+                  {
+                    "var": "product"
+                  },
+                  "product_field_f5296ba2"
+                ]
+              }
+            ]
+          },
+          "data": {
+            "product": null
+          }
+        },
+        "readOnly": false,
+        "_id": "65ba991d5293dbd4255dd62e"
+      }
+    ]
+  },
+  "rules": [],
+  "event": {
+    "eventId": "06a9d",
+    "organizationId": "1",
+    "active": true,
+    "appearance": {
+      "themeName": "zapisani",
+      "navbarTheme": "primary-lightened",
+      "landingPageTemplate": "None"
+    },
+    "event": {
+      "name": "Testy Frontend",
+      "slogan": "Informacja",
+      "description": "<p></p>",
+      "domainName": "testy-zadanie",
+      "isMainDomain": true,
+      "emailAddress": "kontakt@zapisani.pl",
+      "translationType": "default",
+      "registration": {
+        "enabled": true,
+        "confirm": false,
+        "timeConstained": false,
+        "limitOfParticipantsEnabled": false,
+        "limitOfParticipants": 0,
+        "from": "",
+        "to": "",
+        "multipleRegistrationsEnabled": true,
+        "defaultCustomerType": "participant"
+      },
+      "survey": {
+        "present": false,
+        "enabled": true,
+        "from": "",
+        "to": "",
+        "timeConstained": false
+      },
+      "reception": {
+        "enabled": false,
+        "meetings": {
+          "enabled": false,
+          "current": 0
+        }
+      },
+      "form": {
+        "hasPrivateForm": false,
+        "fillFormWithUserData": false,
+        "useOldFormBuilder": false,
+        "useOldSurveyBuilder": false,
+        "registerButtonText": "Uzyskaj dostęp przedpremierowy",
+        "registrationFormTitleText": "Uzyskaj dostęp przedpremierowy",
+        "hideRegistrationFormTitle": true,
+        "hideRegistrationFormLogo": true,
+        "enableWizard": false,
+        "hideWizardProgress": false,
+        "hideWizardButtons": false
+      },
+      "from": "2023-01-31T23:00:00.000Z",
+      "to": "2083-01-31T23:00:00.000Z",
+      "groupSize": {
+        "enabled": false,
+        "min": 1,
+        "max": 1
+      },
+      "useBetaFormBuilder": true,
+      "groupSettings": {
+        "enabled": false,
+        "min": 1,
+        "max": 10,
+        "customerWithoutParticipant": false
+      },
+      "smsSender": "TestyFronte"
+    },
+    "calendar": {
+      "enabled": false
+    },
+    "payments": {
+      "enabled": true,
+      "online": false,
+      "cash": true,
+      "discount": false,
+      "roundToInt": false,
+      "daysLate": 14,
+      "automatic": true,
+      "settlementsWithHistory": false,
+      "installments": {
+        "enabled": false,
+        "billBeforeInstallment": false,
+        "configurations": [
+          {
+            "name": "Płatność jednorazowa",
+            "definitionId": "36dddcee-f803-4f9b-84c6-1b8f0286e81c",
+            "type": "constantNumber",
+            "count": 1,
+            "calculationType": "totalAmount",
+            "constantNumberConfig": {
+              "every": 1,
+              "frequency": "immediate",
+              "on": 1
+            }
+          }
+        ]
+      },
+      "statements": {
+        "enabled": true,
+        "removeDiactrics": false,
+        "distributionAlgorithm": "auto",
+        "matchOnCustomerData": true,
+        "matchOnParticipantData": true
+      }
+    },
+    "organization": {
+      "organizationId": "1",
+      "ownerId": "",
+      "name": "Zapisani.pl",
+      "domainName": "na",
+      "useDomain": false,
+      "emailAddress": "kontakt@zapisani.pl",
+      "logo": {
+        "id": "c6665aed-56be-4531-8518-8c01896f79c6",
+        "fileName": "logo-zapisani-pl.png",
+        "mimeType": "image/png",
+        "modified": "2023-08-25T23:08:52.036Z",
+        "size": 69110,
+        "extension": "png"
+      },
+      "url": "https://zapisani.pl",
+      "bankAccount": "PL42 1140 2004 0000 3902 7951 8828",
+      "invoiceData": {
+        "fullName": "ennovative Michał Jeleń",
+        "taxId": "1132320392",
+        "address": "ul. Poprawna 140M / 2",
+        "postalCode": "03-984",
+        "city": "Warszawa",
+        "phoneNumber": "733834188"
+      },
+      "paymentModule": "paynow",
+      "emailServer": {
+        "enabled": false,
+        "email": "",
+        "host": "",
+        "username": "",
+        "password": "",
+        "port": 0,
+        "secure": true,
+        "dkim": false
+      },
+      "participantQuota": 99,
+      "customerSettings": {
+        "hasGlobalPayments": true,
+        "updateMarketingConsent": true,
+        "allowDuplicateNotifications": true,
+        "twoPeople": false,
+        "useCustomerKey": false
+      },
+      "invoicing": {
+        "fullName": "ennovative Michał Jeleń",
+        "taxId": "113-232-03-92",
+        "address": {
+          "street": "Stanów Zjednoczonych 20",
+          "homeNo": "",
+          "postalCode": "03-964",
+          "city": "Warszawa",
+          "country": ""
+        },
+        "lumpPercent": 8.5,
+        "lumpSum": false,
+        "vatPercent": 23,
+        "useVat": true,
+        "daysToPay": 14,
+        "invoiceNumberMonthly": false,
+        "invoiceNumberPattern": "xxxx/ZP/YYYY",
+        "invoiceNumberSeed": "10000"
+      },
+      "useSystemPaymentAccounts": true,
+      "payu": {},
+      "subscriptionStatus": "quota",
+      "subscription": {
+        "participantQuota": 96,
+        "smsQuota": 98,
+        "useSystemPaymentAccounts": true
+      },
+      "permissions": [
+        {
+          "id": "57514",
+          "role": "reception",
+          "userId": "ewa.milunska@gmail.com",
+          "readyToSend": false
+        }
+      ],
+      "phoneNumber": "733834188"
+    },
+    "isSurvey": false,
+    "pixel": {
+      "enabled": true,
+      "pixelId": ""
+    },
+    "invoicing": {
+      "enabled": false,
+      "serviceName": "Sprzedaż usług zapisani.pl",
+      "serviceUnit": "szt.",
+      "invoicePerBilling": true,
+      "showBrutto": false,
+      "vatPercent": 0,
+      "lumpSum": false,
+      "lumpPercent": 0,
+      "addInvoiceWhenBill": false
+    },
+    "dataSettings": {
+      "participantsSortEnabled": false
+    },
+    "organizationValues": {
+      "_id": "64eaa02187091e74cd5c4bef",
+      "organizationId": "1",
+      "invoiceNumber": 3,
+      "invoiceNumberModified": "2023-12-19T19:49:06.455Z",
+      "participantQuota": 0,
+      "participantQuotaModified": "2023-08-27T01:00:17.855Z",
+      "mailQuota": 0,
+      "mailQuotaModified": "2023-08-27T01:00:17.855Z",
+      "smsQuota": 0,
+      "smsQuotaModified": "2023-08-27T01:00:17.855Z",
+      "__v": 0,
+      "subscriptionQuota": 0,
+      "subscriptionQuotaModified": "2023-09-15T09:46:32.869Z"
+    },
+    "subscription": {
+      "firstRegistration": "2023-11-04T12:50:26.175Z",
+      "enabled": false
+    },
+    "accommodation": {
+      "enabled": false,
+      "allowNoAccommodation": false,
+      "allowChangeRoomCategory": false,
+      "allowSplitGroup": false,
+      "allowAccommodationChange": false,
+      "allowAutomaticAccomodation": false,
+      "allowUnwantedParticipants": false,
+      "allowOverbooking": false
+    }
+  },
+  "emailField": "email_main",
+  "templates": {
+    "eventId": "06a9d",
+    "domainName": "",
+    "confirmation": {
+      "body": "<p>Dziękujemy za rejestrację w <strong>ZAPISANI.PL</strong>!</p><p>Wkrótce otrzymasz informacje pozwalające na korzystanie z systemu drogą mailową.</p><p>Pozdrawiam,</p><p>Zespół ZAPISANI.PL</p>"
+    },
+    "participant": {
+      "subject": "",
+      "body": "",
+      "includeData": false,
+      "dataShowHeaders": false,
+      "dataColumns": []
+    },
+    "payments": {
+      "subject": "",
+      "body": "<p>Witamy w <strong>ZAPISANI.PL</strong>!</p><p>Na koncie występują zaległości.</p><p>Bieżące saldo do uregulowania: <strong>{{LEFT_TO_PAY}} zł.</strong></p><p>Prosimy o dokonanie płatności tutaj: {{PAYMENTLINK}}</p><p>{{CALCULATIONDATA}}</p><p>Pozdrawiamy,</p><p>zespół <strong>ZAPISANI.PL</strong></p>",
+      "includePayments": false,
+      "includeData": false,
+      "dataShowHeaders": false,
+      "dataColumns": []
+    },
+    "ticket": {
+      "enabled": false,
+      "daysAfter": 1,
+      "subject": "",
+      "body": "",
+      "includeLink": false,
+      "dataShowHeaders": false,
+      "dataColumns": []
+    },
+    "paymentReminder": {
+      "enabled": false,
+      "daysAfter": 4,
+      "subject": "",
+      "body": ""
+    },
+    "cancellationNotification": {
+      "enabled": false,
+      "daysAfter": 14,
+      "subject": "",
+      "body": ""
+    }
+  },
+  "notifications": {
+    "_id": "65ba51c55293dbd4255dcda7",
+    "eventId": "06a9d",
+    "data": [
+      {
+        "id": "notification_870fdf",
+        "contextType": "participant",
+        "receiver": "participant",
+        "eventType": "participant_registration",
+        "days": 0,
+        "enabled": false,
+        "smsEnabled": false,
+        "smsTemplate": "Utworzono nową organizację {{BASIC_FIELD_43BB3BF6}}! Więcej informacji w wiadomości email.",
+        "mailEnabled": true,
+        "mailSubjectTemplate": "Organizacja została utworzona!",
+        "mailBodyTemplate": "<p>Witamy w ZAPISANI.PL!</p><p>Twoja organizacja <strong>{{BASIC_FIELD_43BB3BF6}}</strong> została pomyślnie utworzona!</p><p>Następnym krokiem jest utworzenie nowego wydarzenia.</p><p>https://wydarzenie.localhost:3000/formularz?basic_field_a2084faf={{BASIC_FIELD_A2084FAF}}</p><p>Pozdrawiamy,</p><p>Zespół ZAPISANI.PL.</p>",
+        "allowMultipleRuns": false,
+        "_id": "6523d65d76d9c8b095aca497"
+      },
+      {
+        "id": "notification_cc591f",
+        "contextType": "participant",
+        "receiver": "organization",
+        "eventType": "participant_registration",
+        "days": 0,
+        "enabled": true,
+        "smsEnabled": true,
+        "smsTemplate": "lista.zapisani.pl: {{EMAIL_MAIN}} - {{BASIC_FIELD_EE0B49FB}}",
+        "mailEnabled": false,
+        "mailSubjectTemplate": "",
+        "mailBodyTemplate": "",
+        "allowMultipleRuns": false,
+        "_id": "6558eaaed0e10572cd6e1a8e"
+      }
+    ],
+    "__v": 1
+  }
+}
