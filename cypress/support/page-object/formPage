@@ -27,15 +27,15 @@ class formPage {
     cy.get('button[test-id="registration-button"]').click()
   }
 
-  clickTransgerBtn(){
+  clickTransgerBtn() {
     cy.get('[test-id="btn-transfer"]')
   }
-  
-  clickCashBtn(){
+
+  clickCashBtn() {
     cy.get('[test-id="btn-cash"]')
   }
 
-  clickEndBtn(){
+  clickEndBtn() {
     cy.get("button[type='button']").contains("Zakończ").click()
   }
 
@@ -44,17 +44,32 @@ class formPage {
     this.fillPhoneNumber('123456789')
     this.fillFirstName('John')
     this.fillLastName('Doe')
-    this.fillBasicField('basic_field_ee0b49fb', '10', {timeout: 10})
+    this.fillBasicField('basic_field_ee0b49fb', '10', { timeout: 10 })
     this.fillBasicField('basic_field_855dd2b7', 'Lorem ipsum')
-    this.selectRadioBtn();
-    
+    this.selectRadioBtn()
+
     //this.selectProductField('product_field_83cf9412')
   }
   selectRadioBtn() {
     cy.get('div.form-check input[type="radio"]').then($checkboxes => {
-        const randomIndex = Math.floor(Math.random() * $checkboxes.length)
-        cy.wrap($checkboxes[randomIndex]).check()
-      })
+      const randomIndex = Math.floor(Math.random() * $checkboxes.length)
+      cy.wrap($checkboxes[randomIndex]).check()
+    })
+  }
+  checkingSukces() {
+    cy.get('.text-center')
+      .eq(0)
+      .should('contain', 'Rejestracja przyjęta', { timeout: 5000 });
+
+    cy.get('.text-center')
+      .eq(1)
+      .should('contain', 'Rejestracja przyjęta. Dziękujemy!');
+  }
+  selectingCash() {
+    cy.url().should('include', '/platnosc');
+    cy.get('[test-id="btn-cash"]', { timeout: 10000 }).click();
+    cy.get('[test-id="registration-button"]').click();
+    cy.url().should('include', '/zakonczono/gotowka');
   }
 }
 

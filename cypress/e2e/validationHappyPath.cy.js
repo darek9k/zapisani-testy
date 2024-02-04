@@ -13,10 +13,10 @@ describe('Test na stronie testy-zadanie.zapisani.dev', () => {
 
     //pobranie danych początkowych 'Dostępne'
     cy.wait('@getData')
-    .its('response.body')
-    .then((body) => {
-    initialCount = extractCountData(body, 'Produkt');
-    });
+      .its('response.body')
+      .then((body) => {
+        initialCount = extractCountData(body, 'Produkt');
+      });
 
     FormPage.clickRegistrationButton()
     selectingCash();
@@ -26,11 +26,11 @@ describe('Test na stronie testy-zadanie.zapisani.dev', () => {
 
     //sprawdzenie i asercja ilości 'Dostępne'
     cy.wait('@getFinalData')
-    .its('response.body')
-    .then((body) => {
-    expect(extractCountData(body, 'Produkt') - initialCount).to.eq(1);
-    });
-   })
+      .its('response.body')
+      .then((body) => {
+        expect(extractCountData(body, 'Produkt') - initialCount).to.eq(1);
+      });
+  })
 })
 
 function selectingCash() {

@@ -5,7 +5,6 @@ module.exports = defineConfig({
     baseUrl:'https://testy-zadanie.zapisani.dev',
     includeShadowDom: true,
     chromeWebSecurity: true,
-    supportFile: 'cypress/support/commands.js',
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
