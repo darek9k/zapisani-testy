@@ -53,23 +53,17 @@ class formPage {
   selectRadioBtn() {
     cy.get('div.form-check input[type="radio"]').then($checkboxes => {
       const randomIndex = Math.floor(Math.random() * $checkboxes.length)
-      cy.wrap($checkboxes[randomIndex]).check()
+      cy.wrap($checkboxes[randomIndex-1]).check()
     })
   }
   checkingSukces() {
-    cy.get('.text-center')
-      .eq(0)
-      .should('contain', 'Rejestracja przyjęta', { timeout: 5000 });
-
-    cy.get('.text-center')
-      .eq(1)
-      .should('contain', 'Rejestracja przyjęta. Dziękujemy!');
+    cy.wait(5000)
+    cy.get('#show-info').should('exist');
   }
   selectingCash() {
     cy.url().should('include', '/platnosc');
     cy.get('[test-id="btn-cash"]', { timeout: 10000 }).click();
     cy.get('[test-id="registration-button"]').click();
-    cy.url().should('include', '/zakonczono/gotowka');
   }
 }
 

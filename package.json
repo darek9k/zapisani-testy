@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/darek9k/zapisani-testy#readme",
   "dependencies": {
-    "faker": "^6.6.6"
+    "faker": "^6.6.6",
+    "mongoose": "^8.1.1",
+    "puppeteer": "^21.11.0"
   },
   "devDependencies": {
     "cypress": "^13.6.4",

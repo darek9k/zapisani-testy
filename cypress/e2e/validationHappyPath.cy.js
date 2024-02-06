@@ -19,8 +19,8 @@ describe('Test na stronie testy-zadanie.zapisani.dev', () => {
       });
 
     FormPage.clickRegistrationButton()
-    selectingCash();
-    checkingSukces();
+    FormPage.selectingCash();
+    FormPage.checkingSukces();
     cy.intercept('GET', '/services/event/all-data/06a9d').as('getFinalData')
     FormPage.clickEndBtn()
 
@@ -33,13 +33,6 @@ describe('Test na stronie testy-zadanie.zapisani.dev', () => {
   })
 })
 
-function selectingCash() {
-  cy.url().should('include', '/platnosc');
-  cy.get('[test-id="btn-cash"]', { timeout: 10000 }).click();
-  cy.get('[test-id="registration-button"]').click();
-  cy.url().should('include', '/zakonczono/gotowka');
-}
-
 function extractCountData(response, label) {
   const productField = response.definition.find(item => item.label === label);
   const selectedOption = productField.options.find(option => option.value === 'Produkt z ograniczoną pulą');
@@ -47,14 +40,3 @@ function extractCountData(response, label) {
   const count = selectedOption.count;
   return count;
 }
-
-function checkingSukces() {
-  cy.get('.text-center')
-    .eq(0)
-    .should('contain', 'Rejestracja przyjęta', { timeout: 5000 });
-
-  cy.get('.text-center')
-    .eq(1)
-    .should('contain', 'Rejestracja przyjęta. Dziękujemy!');
-}
-
